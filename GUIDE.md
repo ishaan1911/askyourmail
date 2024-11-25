@@ -1,14 +1,14 @@
 # AskYourMail: Comprehensive Guide
 
 ## Overview
-AskYourMail is an advanced semantic search engine that uses OpenAI's embeddings and FAISS to provide intelligent search capabilities across any type of data. Whether you're working with emails, documents, products, or any text-based data, this system can help you find relevant information using natural language queries.
+AskYourMail is an advanced semantic search engine that uses OpenAI's embeddings and FAISS to provide intelligent search capabilities across any type of email data. Whiler you're working with emails, this system can help you find relevant information using natural language queries.
 
 ## Key Features
-- 🔍 **Universal Search**: Works with any text data type
+- 🔍 **Diverse Search**: Works with any novel type of email data
 - 🧠 **Semantic Understanding**: Understands meaning, not just keywords
 - ⚡ **High Performance**: Handles millions of documents efficiently
 - 🎯 **Accurate Results**: Uses state-of-the-art embedding models
-- 🔄 **Real-time Updates**: Supports adding and updating documents
+- 🔄 **Real-time Updates**: Supports adding and updating emails.
 
 ## Getting Started
 
