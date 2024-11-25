@@ -1,0 +1,27 @@
+[
+    {
+        "thread_id": 1,
+        "subject": "Meeting Agenda for 10/12",
+        "timestamp": 1613079600000,
+        "from": "john.doe@example.com",
+        "to": ["jane.smith@example.com", "bob.jones@example.com"],
+        "content": "Please find attached the meeting agenda for 10/12.\n\n-----Original Message-----\nFrom: admin@example.com\nSent: 10/10/2020"
+    },
+    {
+        "thread_id": 2,
+        "subject": "Project Updates",
+        "timestamp": 1613083200000,
+        "from": "alice.wilson@example.com",
+        "to": ["charles.brown@example.com"],
+        "content": "Project updates for this week:\n\n-----Original Message-----\nFrom: manager@example.com\nSent: 10/11/2020"
+    },
+    {
+        "thread_id": 3,
+        "subject": "Lunch Plans?",
+        "timestamp": 1613086800000,
+        "from": "emily.white@example.com",
+        "to": ["tom.green@example.com"],
+        "content": "Hey, do you want to grab lunch tomorrow?\n\n-----Original Message-----\nFrom: emily.white@example.com\nSent: 10/11/2020"
+    }
+]
+
