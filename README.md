@@ -1,141 +1,109 @@
-# Semantic Search Engine
+# AskYourMail 📧
 
-A powerful and scalable semantic search engine that can handle any type of data using OpenAI's embeddings and FAISS for efficient similarity search.
+A powerful semantic email search system that understands natural language queries. Find exactly what you're looking for in your emails using plain English questions.
 
-## Features
+## 🌟 Features
 
-- 🔍 **Universal Data Support**: Works with any type of text data (emails, documents, products, etc.)
-- 🚀 **Highly Scalable**: Efficiently handles millions of documents using FAISS indexing
-- 💪 **Performance Optimized**: 
-  - Batch processing
-  - Parallel query processing
-  - Memory-efficient operations
-- 🔧 **Flexible Configuration**:
-  - Multiple similarity metrics (L2, cosine)
-  - Configurable batch sizes
-  - Adjustable similarity thresholds
-- 🔒 **Production Ready**:
-  - Thread-safe operations
-  - Error handling
-  - Comprehensive logging
+- **Natural Language Search**: Ask questions in plain English
+  - "Find emails about lunch plans"
+  - "Show me emails from John about meetings"
+  - "Find project updates from last October"
 
-## Installation
+- **Smart Search Capabilities**:
+  - 🔍 Semantic understanding (finds related content)
+  - 👤 Search by sender/recipient
+  - 📅 Date-based search
+  - 📝 Content and subject search
+  - 🔄 Combined search criteria
 
-1. Clone the repository:
-```bash
-git clone [your-repo-url]
-cd email_retrieval
+- **User-Friendly Interface**:
+  - 🎨 Colored output for better readability
+  - ✨ Search term highlighting
+  - 🖱️ Interactive email viewing
+  - 📊 Relevance scoring
+
+## 🚀 Quick Start
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/ishaan1911/askyourmail.git
+   cd askyourmail
+   ```
+
+2. **Set Up Environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+3. **Configure API Key**
+   Create a file named `key.env`:
+   ```env
+   OPENAI_API_KEY=your_api_key_here
+   ```
+
+4. **Run the System**
+   ```bash
+   python main.py
+   ```
+
+## 💡 Example Queries
+
+- "Find emails about lunch plans"
+- "Show me emails from john.doe about meetings"
+- "Find emails sent to bob.jones in October"
+- "Show project updates"
+- "Find emails with attachments about the budget"
+
+## 🛠️ Technical Details
+
+- Uses OpenAI's embeddings for semantic understanding
+- FAISS for efficient similarity search
+- Python-based implementation
+- Supports various email formats
+
+## 📚 Project Structure
+
+```
+askyourmail/
+├── main.py           # Main search interface
+├── embeddings.py     # Embedding generation
+├── retrieval.py      # Search functionality
+├── evaluation.py     # Testing & metrics
+└── examples/         # Example implementations
 ```
 
-2. Create a virtual environment (recommended):
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+## 🔧 Advanced Usage
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+See [GUIDE.md](GUIDE.md) for:
+- Detailed feature documentation
+- Advanced search techniques
+- Performance optimization
+- Troubleshooting
 
-4. Set up your OpenAI API key:
-Create a `key.env` file in the project root:
-```env
-OPENAI_API_KEY=your_api_key_here
-```
-
-## Quick Start
-
-```python
-from retrieval import SemanticRetriever
-
-# Initialize the retriever
-retriever = SemanticRetriever()
-
-# Add items to the index
-documents = [
-    {"content": "First document content"},
-    {"content": "Second document content"},
-    {"content": "Third document content"}
-]
-retriever.add_items(documents)
-
-# Search
-results = retriever.search("your search query", k=3)
-for doc_id, score in results:
-    print(f"Document {doc_id}: Score {score}")
-```
-
-## Advanced Usage
-
-### Custom Data Types
-```python
-# Configure content field for your data structure
-retriever = SemanticRetriever(content_field="description")
-
-# Add custom items
-products = [
-    {"id": 1, "description": "Blue cotton shirt", "price": 29.99},
-    {"id": 2, "description": "Black leather shoes", "price": 89.99}
-]
-retriever.add_items(products)
-```
-
-### Batch Processing
-```python
-# Process multiple queries in parallel
-queries = ["query1", "query2", "query3"]
-results = retriever.batch_search(queries, k=5, max_workers=4)
-```
-
-### Update Items
-```python
-# Update existing items
-success = retriever.update_item(
-    item_id=1,
-    new_item={"content": "Updated content"}
-)
-```
-
-## Evaluation
-
-Run the evaluation suite:
-```bash
-python evaluation.py
-```
-
-This will test the system against various scenarios:
-- Exact matches
-- Semantic understanding
-- Multiple relevant documents
-- Graded relevance
-- Time-based queries
-- And more...
-
-## Project Structure
-
-- `main.py`: Entry point and example usage
-- `embeddings.py`: Embedding generation logic
-- `retrieval.py`: Core search functionality
-- `evaluation.py`: Test suite and metrics
-- `requirements.txt`: Project dependencies
-- `key.env`: Configuration file (not included in repo)
-
-## Performance Considerations
-
-- For large datasets (>1M items), consider using GPU acceleration with `faiss-gpu`
-- Adjust batch_size based on your memory constraints
-- Use threshold parameter to filter low-quality matches
-- Consider using parallel processing for large batch operations
-
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+3. Make your changes
+4. Submit a pull request
 
-## License
+## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- OpenAI for embeddings API
+- FAISS team for similarity search
+- All contributors and users
+
+## 📬 Contact
+
+For questions or support:
+- Create an issue on GitHub
+- Contact the maintainers
+
+---
+Made with ❤️ by Ishaan Parekh
